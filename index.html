@@ -1689,7 +1689,12 @@ pre,code{overflow-x:auto;max-width:100%}
   .qz-step,.qz-nav,.gauge-card,.verdict,.tip-card{max-width:100%;min-width:0}
 }
 </style>
-<style id="footnote-css">.fn-star{font-size:.72rem;font-weight:700;line-height:1;opacity:.85;margin-left:.12em;vertical-align:super;align-self:flex-start;text-shadow:none}
+<style id="footnote-css">/* Footnote marker on the stat numbers. Sized in em so it scales with each
+   number (hero 2rem, counters up to 3.6rem, about-page 3.4rem). vertical-align
+   handles the inline/block stats; align-self + relative top handle .hero-stats b
+   which is display:inline-flex (where vertical-align is ignored). Gold so it
+   reads against the dark gradient instead of vanishing. */
+.fn-star{font-size:.42em;font-weight:800;line-height:1;color:var(--gold);opacity:1;margin-left:.1em;vertical-align:super;align-self:flex-start;position:relative;top:.12em;text-shadow:none}
 .fn-note{font-family:var(--mono);font-size:.68rem;line-height:1.65;letter-spacing:.02em;color:var(--muted-d);opacity:.82;margin-top:1rem;max-width:64ch}
 .sheet.dk .fn-note{color:var(--shMu);padding:0 .2rem}
 .sh-nums+.fn-note{margin-top:.9rem}
