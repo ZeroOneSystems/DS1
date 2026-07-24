@@ -68,11 +68,15 @@ window.addEventListener("error",function(e){if(e&&isRO(e.message)){e.stopImmedia
 <!-- Tab icons: the 16/32/48 files are cropped to the globe, because the wordmark
      is unreadable below ~64px and the uncropped art reads as a black square.
      The full lockup is used at 180px+ where "Delta Structures" is legible. -->
-<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<!-- Root /favicon.ico is the location Google's favicon crawler checks first and
+     most reliably; root-absolute paths so the icon resolves identically on every
+     route and for Googlebot. -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
 <link rel="manifest" href="data:application/manifest+json,{&quot;name&quot;:&quot;Delta Structures&quot;,&quot;short_name&quot;:&quot;Delta&quot;,&quot;description&quot;:&quot;Delta Structures, Kolkata — one integrated construction partner.&quot;,&quot;start_url&quot;:&quot;.&quot;,&quot;scope&quot;:&quot;.&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;background_color&quot;:&quot;%23050F26&quot;,&quot;theme_color&quot;:&quot;%23050F26&quot;}">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <!-- LCP: both hero layers are referenced from CSS/attributes, so the preload
      scanner cannot find them until the CSSOM is built. Preload them by hand. -->
 <link rel="preload" as="image" href="assets/hero-poster.webp" fetchpriority="high" type="image/webp">
